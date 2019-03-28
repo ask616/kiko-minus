@@ -1,0 +1,68 @@
+# Site settings
+encoding: utf-8
+lang: en-US
+title: "Your title"
+# logo: "/assets/logos/logo.svg"
+author: "Your name"
+email: "your-email@domain.com"
+description: >
+  A description for your page.
+baseurl: ""
+url: "https://myblog.yoursite.com"
+github_username: "yourgithub"
+css_inline: true
+
+# Excludes
+exclude:
+  - README.md
+  - screenshot.png
+  - LICENSE.txt
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - ghost.gemspec
+  - .gitignore
+  - .jekyll-cache
+
+# Gem settings
+pagination:
+  enabled: true
+  per_page: 3
+  offset: 2
+  permalink: "/page/:num/"
+  title: ":title - page :num of :max"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+twitter:
+  username: mytwitter
+author: mytwitter
+social:
+  name: Your Name
+  links:
+    - https://twitter.com/YourTwitter
+    - https://www.facebook.com/YourFacebook
+    - https://www.linkedin.com/in/YourLinkedin
+    - https://github.com/YourGithub
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
+
+# Jekyll settings
+sass:
+  style: compressed
+permalink: pretty
+excerpt_separator: <!-- more -->
+timezone: America/Los_Angeles
+
+# Favicons
+# favicons:
+#   16: "/assets/logos/logo@16px.png"
+#   32: "/assets/logos/logo@32px.png"
+#   96: "/assets/logos/logo@96px.png"
+#   120: "/assets/logos/logo@120px.png"
+#   144: "/assets/logos/logo@144px.png"
+#   180: "/assets/logos/logo@180px.png"
+#   512: "/assets/logos/logo@512px.png"
+#   1024: "/assets/logos/logo@1024px.png"
