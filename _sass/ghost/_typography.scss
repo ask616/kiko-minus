@@ -1,0 +1,179 @@
+/**
+ * Basic typography settings
+ * Adapted from https://github.com/aweekj/Kiko-plus/blob/master/_sass/_typography.scss
+ * and https://github.com/jekyll/minima/blob/master/_sass/minima/_base.scss
+ */
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: $base-font-stack;
+  font-size: $mob-font-size;
+  font-weight: $mob-font-weight;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  @include media-query($on-desktop) {
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+  }
+}
+
+
+/**
+ * Vertical spacing
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-space {
+  margin-bottom: $spacing-unit / 2;
+}
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $heading-font-weight;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: $spacing-unit / 5;
+}
+
+
+/**
+ * Links
+ */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($link-color, 15%);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+/**
+ * Lists
+ */
+ol, ul, dl {
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+ol, ul {
+  > li {
+    &:before {
+      position: absolute;
+      width: $li-bul-width;
+      margin-left: -$li-bul-width;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: right;
+    }
+  }
+}
+
+ul {
+  > li:before {
+    content: "\2022";
+    padding-right: $ul-bul-right-space;
+    font-family: $ul-bul-font;
+    font-size: $ul-bul-font-size;
+    line-height: $ul-bul-line-height;
+  }
+}
+
+ol {
+  counter-reset: section;
+
+  > li:before {
+    counter-increment: section;
+    content: counter(section) ".";
+    padding-right: $ol-bul-right-space;
+    font-family: $ol-bul-font;
+    font-size: $ol-bul-font-size;
+    line-height: $ol-bul-line-height;
+  }
+}
+
+ol, ul {
+  > li {
+    margin: 0 auto $mob-li-bottom-space $li-bul-width;
+    line-height: $li-line-height;
+
+    @include media-query($on-desktop) {
+      margin-bottom: $li-bottom-space;
+    }
+
+    > ol,
+    > ul {
+      margin-top: $mob-li-bottom-space;
+
+        @include media-query($on-desktop) {
+        margin-bottom: $li-bottom-space;
+      }
+    }
+  }
+}
+
+li {
+  > ol,
+  > ul {
+    > li {
+      font-size: ($li-child-size-ratio * 1em);
+      margin: 0 auto ($mob-li-bottom-space * $li-child-size-ratio) ($li-bul-width * $li-child-size-ratio);
+
+      @include media-query($on-desktop) {
+        margin-bottom: $li-bottom-space * $li-child-size-ratio;
+      }
+    }
+  }
+}
+
+dt {
+  float: left;
+  width: $mob-dt-width;
+  overflow: auto;
+  clear: left;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: $mob-li-bottom-space;
+
+  @include media-query($on-desktop) {
+    width: $dt-width;
+    margin-bottom: $li-bottom-space;
+  }
+}
+
+dd {
+  margin-left: $mob-dd-position;
+  margin-bottom: $mob-li-bottom-space;
+
+  @include media-query($on-desktop) {
+    margin-left: $dd-position;
+    margin-bottom: $li-bottom-space;
+  }
+}
