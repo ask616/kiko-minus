@@ -8,21 +8,25 @@ email: "your-email@domain.com"
 description: >
   A description for your page.
 baseurl: ""
-url: "https://myblog.yoursite.com"
+url: ""
 github_username: "yourgithub"
-css_inline: true
+show_excerpts: false
 
 # Excludes
 exclude:
   - README.md
   - screenshot.png
-  - LICENSE.txt
+  - LICENSE
   - CNAME
   - Gemfile
   - Gemfile.lock
   - ghost.gemspec
   - .gitignore
   - .jekyll-cache
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 # Gem settings
 pagination:
@@ -44,10 +48,6 @@ social:
     - https://www.facebook.com/YourFacebook
     - https://www.linkedin.com/in/YourLinkedin
     - https://github.com/YourGithub
-markdown: CommonMark
-commonmark:
-  options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table"]
 
 # Jekyll settings
 sass:
