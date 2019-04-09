@@ -2,4 +2,16 @@
 layout: default
 ---
 
-{{ content }}
+<article class="page">
+  <header>
+    <div class="header-small">
+      <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title | escape }}</a>
+    </div>
+
+    <div class="page-title">{{ page.title | escape }}</div>
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+@import "kiko-minus/colors"; // Import color definitions first for use in variables
+
+/**
+ * Variable definitions
+ */
+$base-font-stack:     Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif !default;
+$base-font-size:      18px !default;
+$base-font-weight:    400 !default;
+$base-line-height:    1.5 !default;
+$base-font-color:     $oc-gray-8 !default;
+
+$spacing-unit:        30px !default;
+
+$heading-font-weight: 600 !default;
+$mob-font-weight:     300 !default; // For mobile devices
+$small-font-size:     14px !default;
+$mob-font-size:       16px !default;
+
+$background-color:    $oc-white !default;
+$link-color:          $oc-blue-7 !default;
+$blockquote-color:    $oc-gray-6 !default;
+$divider-color:       $oc-gray-1 !default;
+$table-color:         $oc-gray-1 !default;
+$code-text-color:     $oc-indigo-9 !default;
+$code-bg-color:       $oc-gray-1 !default;
+
+$on-desktop:          600px !default;
+
+$li-bottom-space:     0.4em !default;
+$mob-li-bottom-space: 0.2em !default;
+$li-bul-width:        1.7em !default;
+$li-line-height:      1.55 !default;
+
+$ul-bul-font:         inherit !default;
+$ul-bul-font-size:    0.8em !default;
+$ul-bul-line-height:  1.8 !default;
+$ul-bul-right-space:  0.65em !default;
+
+$ol-bul-font:         inherit !default;
+$ol-bul-font-size:    1em !default;
+$ol-bul-line-height:  inherit !default;
+$ol-bul-right-space:  0.65em !default;
+
+$li-child-size-ratio: 0.95 !default;
+
+$dt-width:            180px !default;
+$mob-dt-width:        120px !default;
+$dt-dd-space:         20px !default;
+$dd-position:         $dt-width + $dt-dd-space !default;
+$mob-dd-position:     140px !default;
+
+
+/**
+ * Define mixins
+ */
+@mixin media-query ($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size ($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+
+/**
+ * Import partials
+ */
+@import
+  "kiko-minus/normalize",
+  "kiko-minus/typography",
+  "kiko-minus/layout",
+  "kiko-minus/syntax-highlighting"
+;

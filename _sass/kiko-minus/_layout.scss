@@ -1,0 +1,166 @@
+/**
+ * Site layout settings
+ * Adapted from https://github.com/aweekj/Kiko-plus/blob/master/_sass/_site.scss
+ * and https://github.com/jekyll/minima/blob/master/_sass/minima/_layout.scss
+ */
+
+/**
+ * Main wrapper
+ */
+.main-wrapper {
+  max-width: 48rem;
+  padding: 2rem 1.3rem;
+  margin-left:  auto;
+  margin-right: auto;
+
+  @include media-query($on-desktop) {
+    padding: 5rem 1rem;
+  }
+}
+
+
+/**
+ * Page header
+ */
+ .header {
+  &-title {
+    margin: 0.3em 0;
+    @include relative-font-size(2.25);
+    line-height: 1.2em;
+    font-weight: 600;
+
+    a {
+      color: $base-font-color;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    span {
+      color: $oc-gray-5;
+    }
+  }
+
+  &-nav {
+    a {
+      color: $oc-gray-7;
+      text-transform: lowercase;
+      margin-right: .3rem;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header-small {
+  text-align: left;
+  margin-bottom: .75rem;
+  @include relative-font-size(0.7);
+  font-weight: 600;
+  text-transform: uppercase;
+
+  a {
+    color: $base-font-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.page {
+  &-title {
+    margin-bottom: 0.5rem;
+    @include relative-font-size(1.9);
+    line-height: 1.2em;
+    font-weight: 600;
+
+    @include media-query($on-desktop) {
+      @include relative-font-size(2.25);
+    }
+  }
+
+  &-date {
+    margin-bottom: .5rem;
+    @include relative-font-size(0.7);
+  }
+}
+
+
+/**
+ * Post list
+ */
+.post-list {
+  &-item {
+    padding: 4% 0;
+
+    &:hover a {
+      color: lighten($base-font-color, 10%);
+    }
+
+    a {
+      color: $base-font-color;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: .3rem;
+      @include relative-font-size(1.6);
+      font-weight: 600;
+    }
+
+    &-date {
+      @include relative-font-size(.75);
+    }
+
+    &-desc {
+      color: $base-font-color;
+      margin-bottom: .25rem;
+      font-size: 1rem;
+    }
+  }
+
+  &-pagination {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: lowercase;
+
+    &-previous {
+      float: left;
+      padding-left: 2%;
+
+      a {
+        color: $base-font-color;
+
+        &:hover,
+        &:focus {
+          color: lighten($base-font-color, 10%);
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-next {
+      float: right;
+      padding-right: 2%;
+      a {
+        color: $base-font-color;
+
+        &:hover {
+          color: lighten($base-font-color, 10%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

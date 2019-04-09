@@ -10,7 +10,11 @@ description: >
 baseurl: ""
 url: ""
 github_username: "yourgithub"
-show_excerpts: false
+nav:
+  - name:           "About"
+    url:            "/about"
+  - name:           "Archive"
+    url:            "/archive"
 
 # Excludes
 exclude:
@@ -20,7 +24,7 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
-  - ghost.gemspec
+  - kiko-minus.gemspec
   - .gitignore
   - .jekyll-cache
 
@@ -31,8 +35,7 @@ plugins:
 # Gem settings
 pagination:
   enabled: true
-  per_page: 3
-  offset: 2
+  per_page: 2
   permalink: "/page/:num/"
   title: ":title - page :num of :max"
   limit: 0
@@ -53,7 +56,6 @@ social:
 sass:
   style: compressed
 permalink: pretty
-excerpt_separator: <!-- more -->
 timezone: America/Los_Angeles
 
 # Favicons

@@ -82,6 +82,7 @@ ol, ul, dl {
   list-style-image: none;
 }
 
+// Modify spacing before item
 ol, ul {
   > li {
     &:before {
@@ -95,6 +96,7 @@ ol, ul {
   }
 }
 
+// Modify bullet
 ul {
   > li:before {
     content: "\2022";
@@ -105,6 +107,7 @@ ul {
   }
 }
 
+// Modify counter
 ol {
   counter-reset: section;
 
@@ -118,6 +121,7 @@ ol {
   }
 }
 
+// Modify spacing
 ol, ul {
   > li {
     margin: 0 auto $mob-li-bottom-space $li-bul-width;
@@ -138,12 +142,14 @@ ol, ul {
   }
 }
 
+// Modify spacing for nested lists
 li {
   > ol,
   > ul {
     > li {
-      font-size: ($li-child-size-ratio * 1em);
       margin: 0 auto ($mob-li-bottom-space * $li-child-size-ratio) ($li-bul-width * $li-child-size-ratio);
+
+      @include relative-font-size($li-child-size-ratio);
 
       @include media-query($on-desktop) {
         margin-bottom: $li-bottom-space * $li-child-size-ratio;
@@ -176,4 +182,147 @@ dd {
     margin-left: $dd-position;
     margin-bottom: $li-bottom-space;
   }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $blockquote-color;
+  border-left: .3rem solid lighten($blockquote-color, 30%);
+  margin: 0 2rem 1rem 0;
+  padding-left: $spacing-unit / 2;
+  @include relative-font-size(1.125);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Breaks
+ */
+hr {
+  border: 0;
+  border-top: 1px solid $divider-color;
+  margin: 1.5rem auto;
+}
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  @extend %vertical-space;
+  border-radius: 3px;
+}
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+
+/**
+ * Tables
+ */
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid $table-color;
+
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($table-color, 2%);
+    }
+  }
+
+  th, td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+
+  th {
+    background-color: lighten($table-color, 2%);
+    border: 1px solid darken($table-color, 4%);
+    border-bottom-color: darken($table-color, 12%);
+  }
+
+  td {
+    border: 1px solid $table-color;
+  }
+}
+
+
+/**
+ * Code
+ */
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: $code-text-color;
+  background-color: $code-bg-color;
+  border-radius: 3px;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  @include relative-font-size(0.8);
+  line-height: 1.4;
+  white-space: pre;
+  overflow: auto;
+  background-color: $code-bg-color;
+
+  code {
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+
+  pre {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Footnotes
+ */
+a.footnote {
+  &,
+  .post p &,
+  .post ol &,
+  .post ul & {
+    margin: 0 3px;
+    font-size: $small-font-size;
+    -webkit-text-stroke: 0.25px;
+    text-decoration: none;
+  }
+}
+.footnotes {
+  margin: 4rem 0;
+  padding: 2rem 1em;
+  border-top: 1px solid $divider-color;
+  font-size: $small-font-size;
 }

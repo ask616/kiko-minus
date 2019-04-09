@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "ghost"
+  spec.name          = "kiko-minus"
   spec.version       = "0.1.0"
   spec.authors       = ["Areeb Khan"]
   spec.email         = ["areebk@protonmail.com"]
 
   spec.summary       = "Minimalized version of Kiko Plus"
-  spec.homepage      = "https://gitlab.com/areebk/ghost"
+  spec.homepage      = "https://gitlab.com/areebk/kiko-minus"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
