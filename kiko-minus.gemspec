@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Areeb Khan"]
   spec.email         = ["areebk@protonmail.com"]
 
-  spec.summary       = "Minimalized version of Kiko Plus"
+  spec.summary       = "Stripped down version of Kiko Plus"
   spec.homepage      = "https://gitlab.com/areebk/kiko-minus"
   spec.license       = "MIT"
 

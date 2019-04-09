@@ -9,12 +9,14 @@ description: >
   A description for your page.
 baseurl: ""
 url: ""
-github_username: "yourgithub"
 nav:
-  - name:           "About"
-    url:            "/about"
-  - name:           "Archive"
-    url:            "/archive"
+  - name: "About"
+    url: "/about"
+  - name: "Archive"
+    url: "/archive"
+copyright:
+  year: 2019
+  name: Your Name
 
 # Excludes
 exclude:

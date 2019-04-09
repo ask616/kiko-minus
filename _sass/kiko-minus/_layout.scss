@@ -14,7 +14,7 @@
   margin-right: auto;
 
   @include media-query($on-desktop) {
-    padding: 5rem 1rem;
+    padding: 5rem 1rem 2rem;
   }
 }
 
@@ -163,4 +163,13 @@
       }
     }
   }
+}
+
+
+/**
+ * Footer
+ */
+.footer {
+  text-align: center;
+  @include relative-font-size(0.8);
 }
