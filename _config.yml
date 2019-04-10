@@ -29,10 +29,12 @@ exclude:
   - .gitignore
   - .gitlab-ci.yml
   - .jekyll-cache
+  - "*.gem"
 
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 # Gem settings
 pagination:
