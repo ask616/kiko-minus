@@ -165,6 +165,39 @@
   }
 }
 
+/**
+ * Archive list
+ */
+.archive {
+  &-list {
+    &-item {
+      padding: 0.1rem;
+
+      &:hover a {
+        color: lighten($base-font-color, 10%);
+      }
+
+      a {
+        color: $base-font-color;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      &-title {
+        @include relative-font-size(1.1);
+        font-weight: 400;
+      }
+
+      &-date {
+        @include relative-font-size(.7);
+      }
+    }
+  }
+}
+
 
 /**
  * Footer
