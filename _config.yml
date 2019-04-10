@@ -6,8 +6,8 @@ author: "Your name"
 email: "your-email@domain.com"
 description: >
   A description for your page.
-baseurl: ""
-url: ""
+baseurl: "https://areebk.gitlab.io"
+url: "/kiko-minus"
 nav:
   - name: "About"
     url: "/about"
