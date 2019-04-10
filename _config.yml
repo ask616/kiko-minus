@@ -2,7 +2,6 @@
 encoding: utf-8
 lang: en-US
 title: "Your title"
-# logo: "/assets/logos/logo.svg"
 author: "Your name"
 email: "your-email@domain.com"
 description: >
@@ -16,7 +15,7 @@ nav:
     url: "/archive"
 copyright:
   year: 2019
-  name: Your Name
+  name: "Your Name"
 
 # Excludes
 exclude:
@@ -28,6 +27,7 @@ exclude:
   - Gemfile.lock
   - kiko-minus.gemspec
   - .gitignore
+  - .gitlab-ci.yml
   - .jekyll-cache
 
 plugins:
@@ -37,17 +37,17 @@ plugins:
 # Gem settings
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 5
   permalink: "/page/:num/"
   title: ":title - page :num of :max"
   limit: 0
   sort_field: "date"
   sort_reverse: true
 twitter:
-  username: mytwitter
-author: mytwitter
+  username: "mytwitter"
+author: "mytwitter"
 social:
-  name: Your Name
+  name: "Your Name"
   links:
     - https://twitter.com/YourTwitter
     - https://www.facebook.com/YourFacebook
@@ -59,14 +59,3 @@ sass:
   style: compressed
 permalink: pretty
 timezone: America/Los_Angeles
-
-# Favicons
-# favicons:
-#   16: "/assets/logos/logo@16px.png"
-#   32: "/assets/logos/logo@32px.png"
-#   96: "/assets/logos/logo@96px.png"
-#   120: "/assets/logos/logo@120px.png"
-#   144: "/assets/logos/logo@144px.png"
-#   180: "/assets/logos/logo@180px.png"
-#   512: "/assets/logos/logo@512px.png"
-#   1024: "/assets/logos/logo@1024px.png"

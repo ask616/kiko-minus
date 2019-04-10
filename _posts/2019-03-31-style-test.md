@@ -4,8 +4,6 @@ title: "A Full and Comprehensive Style Test"
 description: "Test post for style"
 date: 2019-03-31
 tags: [test, style]
-comments: true
-share: true
 ---
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.

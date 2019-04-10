@@ -1,6 +1,6 @@
 ---
 layout: home
-title: home test
+title: Home
 pagination:
   enabled: true
 ---
