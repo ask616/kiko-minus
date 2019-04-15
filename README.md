@@ -1,11 +1,25 @@
 # kiko-minus
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+kiko-minus is a minimalistic Jekyll theme based on [kiko-plus](https://github.com/aweekj/Kiko-plus)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+While the design and styles are largely inherited from the original theme, kiko-minus comes with many additional features including an emphasis on privacy and speed, automatically compressed images, gzip compression, and SEO optimization.
 
-TODO: Delete this and the text above, and describe your gem
-
+## Features
+- Ready for use with GitLab or GitHub pages
+- Syntax highlighting
+- Automatic image compression
+- Brotli, Zopfli, and Gzip compression
+- Fully responsive
+- Automatic pagination
+- Automatic sitemap generation
+- Automatic page generation based on tags & collections (in progress)
+- Structured data (in progress)
+- SEO support (in progress)
+- LaTeX support (in progress)
+- Comments with ISSO (in progress)
+- Analytics with Fathom (in progress)
+- No third party requests or cookies (unless using Fathom or ISSO)
+- Automatic RSS feed (in progress)
 
 ## Installation
 
