@@ -29,13 +29,17 @@ exclude:
   - .gitignore
   - .gitlab-ci.yml
   - .jekyll-cache
+  - .image-optim-cache
   - "*.gem"
+  - assets/img_archive
 
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-zopfli
+  - image_optim
+  - image_optim_pack
 
 # Gem settings
 pagination:
@@ -56,6 +60,10 @@ social:
     - https://www.facebook.com/YourFacebook
     - https://www.linkedin.com/in/YourLinkedin
     - https://github.com/YourGithub
+image_optim:
+  archive_dir: "assets/img_archive"
+  cache_file: ".image-optim-cache"
+  image_glob: "assets/img/**/*.{gif,png,jpg,jpeg}"
 
 # Jekyll settings
 sass:
