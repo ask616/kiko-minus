@@ -19,8 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate-v2", "~> 2.0"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.3"
   spec.add_runtime_dependency "jekyll-zopfli", "~> 2.1"
-  spec.add_runtime_dependency "image_optim", "~> 0.26"
-  spec.add_runtime_dependency "image_optim_pack", "~> 0.5"
+  spec.add_runtime_dependency "jekyll-image-optim", "~> 1.0"
 
   spec.add_development_dependency "bundler", "~> 2.0"
 end

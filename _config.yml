@@ -38,8 +38,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-zopfli
-  - image_optim
-  - image_optim_pack
+  - jekyll-image-optim
 
 # Gem settings
 pagination:
