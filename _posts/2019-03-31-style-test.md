@@ -1,9 +1,7 @@
 ---
 layout: post
-title: "A Full and Comprehensive Style Test"
-description: "Test post for style"
-date: 2019-03-31
-tags: [test, style]
+title: A Full and (Hopefully) Comprehensive Style Test
+description: Test post for different styles & typography
 ---
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
@@ -43,6 +41,13 @@ Lorem ipsum dolor sit amet, [test link](#) adipiscing elit. **This is strong.** 
 ![Large example image](http://placehold.it/800x400 "Large example image")
 ![Medium example image](http://placehold.it/400x200 "Medium example image")
 ![Small example image](http://placehold.it/200x200 "Small example image")
+
+<figure>
+  <img src="{{ "/assets/img/style-test/golden-gate.jpg" | relative_url }}" alt="Golden Gate Bridge">
+  <figcaption>
+    This is the Golden Gate bridge.
+  </figcaption>
+</figure>
 
 ### 3-1. Image Alignment
 ![Center example image](http://placehold.it/200x200 "Center"){: .center-image}
