@@ -1,23 +1,33 @@
-# Site settings
+#################
+# Site settings #
+#################
 encoding: utf-8
 lang: en-US
 title: "Your title"
-author: "Your name"
-email: "your-email@domain.com"
 description: >
   A description for your page.
+
+# URL including protocol for your site (use "http://localhost:4000" if developing locally)
 url: "https://areebk.gitlab.io"
+# Subpath if necessary
 baseurl: "/kiko-minus"
+
+# List of links to show in the navbar with display name and URL
 nav:
   - name: "About"
     url: "/about"
   - name: "Archive"
     url: "/archive"
+
+# Copyright details for footer
 copyright:
   year: 2019
   name: "Your Name"
 
-# Excludes
+
+############
+# Excludes #
+############
 exclude:
   - README.md
   - screenshot.png
@@ -33,6 +43,10 @@ exclude:
   - "*.gem"
   - assets/img_archive
 
+
+###########
+# Plugins #
+###########
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
@@ -40,7 +54,11 @@ plugins:
   - jekyll-zopfli
   - jekyll-image-optim
 
-# Gem settings
+
+################
+# Gem settings #
+################
+# jekyll-pagination-v2
 pagination:
   enabled: true
   per_page: 5
@@ -49,6 +67,8 @@ pagination:
   limit: 0
   sort_field: "date"
   sort_reverse: true
+
+# jekyll-seo-tag
 twitter:
   username: "mytwitter"
 author: "mytwitter"
@@ -59,12 +79,17 @@ social:
     - https://www.facebook.com/YourFacebook
     - https://www.linkedin.com/in/YourLinkedin
     - https://github.com/YourGithub
+
+# jekyll-image-optim
 image_optim:
   archive_dir: "assets/img_archive"
   cache_file: ".image-optim-cache"
   image_glob: "assets/img/**/*.{gif,png,jpg,jpeg}"
 
-# Jekyll settings
+
+###################
+# Jekyll settings #
+###################
 sass:
   style: compressed
 permalink: pretty
