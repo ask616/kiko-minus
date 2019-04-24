@@ -19,6 +19,26 @@ nav:
   - name: "Archive"
     url: "/archive"
 
+# Refer to https://posativ.org/isso/docs/configuration/client for config options
+isso:
+  enabled: false
+  prefix: ""
+  script_source: ""
+  css: "true"
+  lang: "en"
+  reply_to_self: false
+  require_author: "false"
+  require_email: "false"
+  max_comments_top: "10"
+  max_comments_nested: "5"
+  reveal_on_click: "10"
+  avatar: "false"
+  # avatar_bg: "#f0f0f0"
+  # avatar_fg: "#9abf88 #5698c4 #e279a3 #9163b6"
+  vote: "true"
+  vote_levels: ""
+  feed: "false"
+
 # Copyright details for footer
 copyright:
   year: 2019

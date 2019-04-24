@@ -1,0 +1,61 @@
+
+<script data-isso="{{ site.isso.prefix }}"
+        src="{{ site.isso.script_source }}"
+
+        {% if site.isso.css %}
+        data-isso-css="{{ site.isso.css }}"
+        {% endif %}
+
+        {% if site.isso.lang %}
+        data-isso-lang="{{ site.isso.lang }}"
+        {% endif %}
+
+        {% if site.isso.reply_to_self %}
+        data-isso-reply-to-self="{{ site.isso.reply_to_self }}"
+        {% endif %}
+
+        {% if site.isso.require_author %}
+        data-isso-require-author="{{ site.isso.require_author }}"
+        {% endif %}
+
+        {% if site.isso.require_email %}
+        data-isso-require-email="{{ site.isso.require_email }}"
+        {% endif %}
+
+        {% if site.isso.max_comments_top %}
+        data-isso-max-comments-top="{{ site.isso.max_comments_top }}"
+        {% endif %}
+
+        {% if site.isso.max_comments_nested %}
+        data-isso-max-comments-nested="{{ site.isso.max_comments_nested }}"
+        {% endif %}
+
+        {% if site.isso.reveal_on_click %}
+        data-isso-reveal-on-click="{{ site.isso.reveal_on_click }}"
+        {% endif %}
+
+        {% if site.isso.avatar %}
+        data-isso-avatar="{{ site.isso.avatar }}"
+        {% endif %}
+
+        {% if site.isso.avatar_bg %}
+        data-isso-avatar-bg="{{ site.isso.avatar_bg }}"
+        {% endif %}
+
+        {% if site.isso.avatar_fg %}
+        data-isso-avatar-fg="{{ site.isso.avatar_fg }}"
+        {% endif %}
+
+        {% if site.isso.vote %}
+        data-isso-vote="{{ site.isso.vote }}"
+        {% endif %}
+
+        {% if site.isso.vote_levels %}
+        data-isso-vote-levels="{{ site.isso.vote_levels }}"
+        {% endif %}
+
+        {% if site.isso.feed %}
+        data-isso-feed="{{ site.isso.feed }}"
+        {% endif %}
+        >
+</script>

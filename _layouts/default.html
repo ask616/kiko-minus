@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/logos/favicon-32x16.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/logos/favicon-32x32.png" | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/logos/favicon-16x16.png" | relative_url }}">
   </head>
 
@@ -19,4 +19,8 @@
       </div>
     </main>
   </body>
+
+  {% if site.isso.enabled %}
+  {%- include isso.html -%}
+  {% endif %}
 </html>

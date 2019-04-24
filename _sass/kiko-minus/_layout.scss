@@ -200,6 +200,15 @@
 
 
 /**
+ * Comments
+ */
+.comments-content {
+  padding: 1rem;
+  @include relative-font-size(0.9);
+}
+
+
+/**
  * Footer
  */
 .footer {

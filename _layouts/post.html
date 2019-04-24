@@ -17,5 +17,11 @@ layout: default
 
   <div class="page-content">
     {{ content }}
+
+    {% if site.isso.enabled %}
+    <div class="comments-content">
+      <section id="isso-thread"></section>
+    </div>
+    {% endif %}
   </div>
 </article>
