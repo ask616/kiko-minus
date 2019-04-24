@@ -39,6 +39,10 @@ isso:
   vote_levels: ""
   feed: "false"
 
+fathom:
+  enabled: false
+  script_src: "//analytics.example.tld/tracker.js"
+
 # Copyright details for footer
 copyright:
   year: 2019
