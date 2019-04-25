@@ -12,6 +12,10 @@ url: "https://areebk.gitlab.io"
 # Subpath if necessary
 baseurl: "/kiko-minus"
 
+# Custom user stylesheet
+# css:
+#   src: "/assets/css/user-style.css"
+
 # List of links to show in the navbar with display name and URL
 nav:
   - name: "About"
