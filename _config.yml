@@ -42,6 +42,7 @@ isso:
 fathom:
   enabled: false
   script_src: "//analytics.example.tld/tracker.js"
+  site_id: "SITEID"
 
 # Copyright details for footer
 copyright:
