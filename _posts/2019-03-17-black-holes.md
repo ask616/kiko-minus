@@ -2,6 +2,8 @@
 layout: post
 title: Black Holes
 description: What are they anyway?
+categories:
+  - wikipedia
 ---
 
 # Intro

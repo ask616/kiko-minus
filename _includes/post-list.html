@@ -1,0 +1,39 @@
+{% for post in paginator.posts %}
+  <div class="post-list-item">
+    {% if post.link %}
+    <a href="{{ post.link }}">
+    {% else %}
+    <a href="{{ post.url | prepend: site.baseurl }}">
+    {% endif %}
+      <div class="post-list-item-date">
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      <div class="post-list-item-title">
+        {{ post.title }}
+      </div>
+      {% if post.description %}
+      <div class="post-list-item-desc">
+        {{ post.description }}
+      </div>
+      {% endif %}
+    </a>
+  </div>
+{% endfor %}
+
+<div class="post-list-pagination">
+  <span class="post-list-pagination-previous">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
+        &#60; previous
+      </a>
+    {% endif %}
+  </span>
+
+  <span class="post-list-pagination-next">
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
+        next &#62;
+      </a>
+    {% endif %}
+  </span>
+</div>
