@@ -18,6 +18,17 @@ layout: default
   <div class="page-content">
     {{ content }}
 
+    {% if page.tags.size > 0 %}
+    <div class="page-tags">
+      Tagged as
+      {% for tag in page.tags %}
+      <span class="page-tags-item">
+        {{ tag }}{% unless forloop.last %}, {% endunless %}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if site.isso.enabled %}
     <div class="comments-content">
       <section id="isso-thread"></section>

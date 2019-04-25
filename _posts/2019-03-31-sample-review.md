@@ -2,6 +2,9 @@
 layout: post
 title: A Sample Review
 description: Review of something
+tags:
+  - sample
+  - test tag
 ---
 <dl>
   <dt>Rating:</dt>
