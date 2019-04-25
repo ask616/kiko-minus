@@ -80,6 +80,7 @@ exclude:
 ###########
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-zopfli
@@ -102,7 +103,7 @@ pagination:
 # jekyll-seo-tag
 twitter:
   username: "mytwitter"
-author: "mytwitter"
+author: "Your Name"
 social:
   name: "Your Name"
   links:
