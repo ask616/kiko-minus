@@ -4,6 +4,8 @@ kiko-minus is a minimalistic Jekyll theme based on [kiko-plus](https://github.co
 
 While the design and styles are largely inherited from the original theme, kiko-minus comes with many additional features including an emphasis on privacy and speed, automatically compressed images, gzip compression, and SEO optimization.
 
+![Screenshot](screenshot.png)
+
 ## Features
 - Ready for use with GitLab or GitHub pages
 - Syntax highlighting
