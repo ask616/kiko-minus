@@ -104,6 +104,15 @@ fathom('trackPageview');
 
 In this case, the script is hosted at https://mysite.dev/analytics/tracker.js, and its site ID is ABCDE.
 
+### Gzip Compression
+If configured, kiko-minus will automatically create gzipped versions of your text files that will be served by default if GitHub or GitLab pages, or if otherwise configured on your host. As explained in the plugin's [usage](https://github.com/philnash/jekyll-zopfli#usage), the site must be built in production mode to create the gzipped bundles by setting the `JEKYLL_ENV` environment variable as such:
+
+```
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+This is done because creating the bundles can be slow, and so should only be done in production mode.
+
 ### Category and Tag Pages
 The plugin [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/) lets us paginate on categories and tags (and much more!). The directions for enabling pagination can be found in their [docs](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#paginate-categories-tags-locales), and an example is provided here with [wikipedia articles](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page. It is _highly_ recommended that you use the `filtered-home` layout for these pages.
 
