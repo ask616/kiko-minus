@@ -31,7 +31,7 @@ nav:
 isso:
   enabled: false
   prefix: ""
-  script_source: ""
+  script_src: ""
   css: "true"
   lang: "en"
   reply_to_self: false
@@ -49,7 +49,7 @@ isso:
 
 fathom:
   enabled: false
-  script_src: "//analytics.example.tld/tracker.js"
+  script_src: "https://analytics.example.tld/tracker.js"
   site_id: "SITEID"
 
 # Copyright details for footer

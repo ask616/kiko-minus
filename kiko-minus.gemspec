@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "kiko-minus"
-  spec.version       = "0.5.2"
+  spec.version       = "1.0.0"
   spec.authors       = ["Areeb Khan"]
   spec.email         = ["areebk@protonmail.com"]
 
-  spec.summary       = "Stripped down version of Kiko Plus"
-  spec.homepage      = "https://gitlab.com/areebk/kiko-minus"
+  spec.summary       = "A minimalistic, lightweight Jekyll theme based on Kiko Plus"
+  spec.homepage      = "https://github.com/ask616/kiko-minus"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"

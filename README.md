@@ -16,7 +16,7 @@ While the design and styles are largely inherited from the original theme, kiko-
 - Fully responsive
 - Automatic sitemap generation
 - Filtered pagination based on tags & collections
-- Private Comments with [ISSO](https://posativ.org/isso/)
+- Private comments with [ISSO](https://posativ.org/isso/)
 - Analytics with [Fathom](https://usefathom.com/)
 - Automatic Atom feed
 - No JavaScript, third party requests, or cookies (unless using Fathom or ISSO)
@@ -43,55 +43,73 @@ Or install it yourself as:
 ## Contents
 kiko-minus has an assortment of components to minimize additional needed configuration, so that all you need to do is add your posts to `_posts/` and be ready to go.
 
-### Layouts (`_layouts/`)
+### `_layouts/`
 * `default.html` defines the basic structure of every page, including SEO tags, stylesheet imports, and favicons.
 * `home.html` is used for the index page, and includes a navigation bar and the paginated list of all posts.
 * `page.html` is used for individual pages i.e. an About or Contact page.
-* `post.html`
-* `filtered-home.html`
-* `archive.html`
+* `post.html` is for your blog posts, and can include a comment section if ISSO is enabled.
+* `filtered-home.html` is meant to be used for filtered post lists i.e. pages listing all posts belonging to a category or tag. The sample [wikipedia](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page is an example use case to show all posts that are Wikipedia articles.
+* `archive.html` shows a condensed view of many posts and their publishing dates.
 
-### Includes (`_includes/`)
-* `footer.html`
-* `post-list.html`
-* `isso.html`
-* `fathom.html`
+### `_includes/`
+* `footer.html` is put at the bottom of every page to show copyright information.
+* `post-list.html` renders out a list of posts as defined by pagination.
+* `isso.html` contains the ISSO script tag and is included if comments are enabled. The tag also includes many of the configurable options as defined [here](https://posativ.org/isso/docs/configuration/client/).
+* `fathom.html` contains the tracker code and is included if analytics are enabled. The tag requires the address of your server and the site ID as provided by your Fathom instance.
 
-### Sass (`_sass/`)
-`kiko-minus.scss`
+### `_sass/`
+`kiko-minus.scss` defines the main variables to be used in the rest of the styles, as well as a couple mixins to help make the site responsive. It also imports the rest of the partials.
 
 Inside `kiko-minus/`:
-* `_colors.scss`
-* `_layout.scss`
-* `_normalize.scss`
-* `_syntax-highlighting.scss`
-* `_typography.scss`
+* `_colors.scss` is copied from [Open color](https://yeun.github.io/open-color/) and defines a broad palette for easy use.
+* `_layout.scss` defines the overall structure of the site.
+* `_normalize.scss` is copied from [Normalize.css](https://necolas.github.io/normalize.css/) and is used to render the site consistently across all browsers.
+* `_syntax-highlighting.scss` defines how code is highlighted.
+* `_typography.scss` defines the look and feel of the elements on the site.
 
-### Assets (`assets/`)
-* `css/`
-* `img/`
-
-`img_archive/`
+### `assets/`
+* `css/` contains a single `style.scss` file that imports the rest of the base kiko-minus styles. This is also where custom stylesheets can go, as explained [below](https://github.com/ask616/kiko-minus#custom-stylesheets).
+* `img/` is where your images will go for use throughout the site. You can add subfolders here as is done in this sample to better organize. Be warned that the photos here will be optimized *in place*, and that the originals will be copied over to `assets/img_archive` (or as otherwise defined in your config), which isn't included in your website's build.
 
 ### Misc
-* `.image-optim-cache`
-* `categories/` and `tags/`
-* `pages/`
-* `index.md`
+* `.image-optim-cache` is used by the image optimization [plugin](https://github.com/ask616/jekyll-image-optim) to keep track of what files have already been optimized. *Do not delete this!*
+* `categories/` and `tags/` can be used to define category or tag filtered pages.
+* `pages/` can be used for individual pages.
+* `index.md` is the home page for your site.
 
 ## Usage
 
 ### Custom Stylesheets
+To add your own stylesheet, uncomment the `css` entry in `_config.yml`, and add the location of the stylesheet as its `src`.
 
 ### ISSO Integration
+To enable comments on your posts, set `isso.enabled` to `true` in your `_config.yml`, and add the location of the embed script as hosted by your ISSO server to `isso.script_src`. The other options can be deleted if you want the defaults as defined on ISSO's [website](https://posativ.org/isso/docs/configuration/client/).
 
 ### Fathom Integration
+To enable analytics throughout the site, set `fathom.enabled` to `true` in your `_config.yml`, and add the location of the tracker script (i.e. https://yoursite.tld/analytics/tracker.js) to `fathom.script_src` and your site ID to `fathom.site_id`.
+
+If you don't know the location of the script and site ID, you can look at the tracking code provided on your Fathom dashboard:
+
+```
+...
+  m.parentNode.insertBefore(o,m)
+})(document, window, '//mysite.dev/analytics/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+...
+
+```
+
+In this case, the script is hosted at https://mysite.dev/analytics/tracker.js, and its site ID is ABCDE.
 
 ### Category and Tag Pages
+The plugin [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/) lets us paginate on categories and tags (and much more!). The directions for enabling pagination can be found in their [docs](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#paginate-categories-tags-locales), and an example is provided here with [wikipedia articles](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page. It is _highly_ recommended that you use the `filtered-home` layout for these pages.
 
 ### Favicons
+kiko-minus supports including a 16x16 and 32x32 px favicon for your site. Place them in the `assets/img/logos/` directory with the names `favicon-16x16.png` and `favicon-32x32.png`, respectively, and they'll automatically be loaded.
 
 ### SEO Setup
+This theme uses `jekyll-seo-tag` to help provide metadata to improve your SEO scores. You can supply information to the `_config.yml` as defined [here](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md) (many of the options are already added to the config you copy over from this theme).
 
 ## Contributing
 
