@@ -6,6 +6,8 @@ kiko-minus is a minimalistic Jekyll theme based on [kiko-plus](https://github.co
 
 While the design and styles are largely inherited from the original theme, kiko-minus strips away heavy dependencies like Google Analytics and Disqus in favor of lightweight alternatives. It comes with many additional features with an emphasis on privacy and speed, including automatically compressed images, gzip compression, and SEO optimization.
 
+[Demo](https://areebk.gitlab.io/kiko-minus/)
+
 ![Screenshot](screenshot.png)
 
 ## Features
