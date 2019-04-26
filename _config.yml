@@ -12,6 +12,8 @@ url: "https://areebk.gitlab.io"
 # Subpath if necessary
 baseurl: "/kiko-minus"
 
+theme: kiko-minus
+
 # Custom user stylesheet
 # css:
 #   src: "/assets/css/user-style.css"
