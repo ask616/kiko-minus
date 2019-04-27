@@ -26,6 +26,8 @@ While the design and styles are largely inherited from the original theme, kiko-
 
 ## Installation
 
+You can use kiko-minus on your site after scaffolding with `jekyll new`:
+
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
@@ -41,6 +43,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install kiko-minus
+
+Finally, make sure to follow the directions [below](https://github.com/ask616/kiko-minus#pagination) to enable pagination on your home page.
 
 ## Contents
 kiko-minus has an assortment of components to minimize additional needed configuration, so that all you need to do is add your posts to `_posts/` and be ready to go.
@@ -80,6 +84,16 @@ Inside `kiko-minus/`:
 * `index.md` is the home page for your site.
 
 ## Usage
+
+### Pagination
+On your `index.md` and any other post list pages that you want paginated (such as category and tag pages), you'll need to add some configuration to each page's front matter. At the very least, you will need the following:
+
+```
+pagination:
+  enabled: true
+```
+
+For more configuration options, you can read the plugin's [docs](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration).
 
 ### Custom Stylesheets
 To add your own stylesheet, uncomment the `css` entry in `_config.yml`, and add the location of the stylesheet as its `src`.
