@@ -8,7 +8,7 @@ description: >
   A description for your page.
 
 # URL including protocol for your site (use "http://localhost:4000" if developing locally)
-url: "https://areebk.gitlab.io"
+url: "https://areebk.github.io"
 # Subpath if necessary
 baseurl: "/kiko-minus"
 
@@ -24,8 +24,6 @@ nav:
     url: "/about"
   - name: "Archive"
     url: "/archive"
-  - name: "Wikipedia Articles"
-    url: "/wikipedia"
 
 # Refer to https://posativ.org/isso/docs/configuration/client for config options
 isso:
@@ -72,9 +70,7 @@ exclude:
   - .gitignore
   - .gitlab-ci.yml
   - .jekyll-cache
-  - .image-optim-cache
   - "*.gem"
-  - assets/img_archive
 
 
 ###########
@@ -83,24 +79,16 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-zopfli
-  - jekyll-image-optim
 
 
 ################
 # Gem settings #
 ################
-# jekyll-pagination-v2
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: "/page/:num/"
-  title: ":title"
-  limit: 0
-  sort_field: "date"
-  sort_reverse: true
+# jekyll-paginate
+paginate: 5
+paginate_path: "/page/:num/"
 
 # jekyll-seo-tag
 twitter:
@@ -113,12 +101,6 @@ social:
     - https://www.facebook.com/YourFacebook
     - https://www.linkedin.com/in/YourLinkedin
     - https://github.com/YourGithub
-
-# jekyll-image-optim
-image_optim:
-  archive_dir: "assets/img_archive"
-  cache_file: ".image-optim-cache"
-  image_glob: "assets/img/**/*.{gif,png,jpg,jpeg}"
 
 
 ###################
