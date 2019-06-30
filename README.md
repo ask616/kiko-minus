@@ -8,6 +8,8 @@ While the design and styles are largely inherited from the original theme, kiko-
 
 [Demo](https://areebk.gitlab.io/kiko-minus/)
 
+*Warning*: Because Github Pages only supports a limited subset of gems, this theme doesn't work out of the box if you're hosting with Github. Check [this](https://github.com/ask616/kiko-minus-gh) fork that removes the automatic image compression and tag/collection pagination so that the theme will work on Github Pages. Until https://github.com/github/pages-gem/issues/257 is reolved, I'll have to maintain two separate repos. If you're using Gitlab pages, this theme should work completely out of the box.
+
 ![Screenshot](screenshot.png)
 
 ## Features
@@ -25,7 +27,6 @@ While the design and styles are largely inherited from the original theme, kiko-
 - Structured data support (TODO)
 
 ## Installation
-
 You can use kiko-minus on your site after scaffolding with `jekyll new`:
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -45,6 +46,11 @@ Or install it yourself as:
     $ gem install kiko-minus
 
 Finally, make sure to follow the directions [below](https://github.com/ask616/kiko-minus#pagination) to enable pagination on your home page.
+
+You can refer to [this](https://github.com/ask616/blog) example for guidance.
+
+### Updating
+To update your blog to the latest version of the theme, simply run `bundle update`, or specify the version of kiko-minus you want in your Gemfile, and run `bundle update`.
 
 ## Contents
 kiko-minus has an assortment of components to minimize additional needed configuration, so that all you need to do is add your posts to `_posts/` and be ready to go.
