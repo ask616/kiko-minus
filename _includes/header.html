@@ -1,0 +1,5 @@
+<nav class="header-nav">
+  {% for nav in site.nav %}
+    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+  {% endfor %}
+</nav>

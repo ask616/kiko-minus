@@ -4,19 +4,16 @@
 
 kiko-minus is a minimalistic Jekyll theme based on [kiko-plus](https://github.com/aweekj/Kiko-plus).
 
-While the design and styles are largely inherited from the original theme, kiko-minus strips away heavy dependencies like Google Analytics and Disqus in favor of lightweight alternatives. It comes with many additional features with an emphasis on privacy and speed, including automatically compressed images, gzip compression, and SEO optimization.
+While the design and styles are largely inherited from the original theme, kiko-minus strips away heavy dependencies like Google Analytics and Disqus in favor of lightweight alternatives.
 
 [Demo](https://areebk.gitlab.io/kiko-minus/)
 
-*Warning*: Because Github Pages only supports a limited subset of gems, this theme doesn't work out of the box if you're hosting with Github. Check [this](https://github.com/ask616/kiko-minus-gh) fork that removes the automatic image compression, tag/collection pagination, and archive page so that the theme will work on Github Pages. Until https://github.com/github/pages-gem/issues/257 is resolved, I'll have to maintain two separate repos. If you're using Gitlab pages, this theme should work completely out of the box.
+*Warning*: This theme is not compatible with Github Pages, which only supports [these](https://pages.github.com/versions/) plugins.
 
 ![Screenshot](screenshot.png)
 
 ## Features
-- Ready for use with GitLab or GitHub pages
 - Syntax highlighting
-- Automatic image compression
-- Zopfli compression (gzip)
 - Fully responsive
 - Automatic sitemap generation
 - Filtered pagination based on tags & collections
@@ -24,7 +21,6 @@ While the design and styles are largely inherited from the original theme, kiko-
 - Analytics with [Fathom](https://usefathom.com/)
 - Automatic Atom feed
 - No JavaScript, third party requests, or cookies (unless using Fathom or ISSO)
-- Structured data support (TODO)
 
 ## Installation
 You can use kiko-minus on your site after scaffolding with `jekyll new`:
@@ -57,13 +53,15 @@ kiko-minus has an assortment of components to minimize additional needed configu
 
 ### `_layouts/`
 * `default.html` defines the basic structure of every page, including SEO tags, stylesheet imports, and favicons.
-* `home.html` is used for the index page, and includes a navigation bar and the paginated list of all posts.
+* `home.html` is used for the index page, and includes a navigation bar and some intro text.
+* 'posts.html' is used to show a list of all your posts.
 * `page.html` is used for individual pages i.e. an About or Contact page.
 * `post.html` is for your blog posts, and can include a comment section if ISSO is enabled.
-* `filtered-home.html` is meant to be used for filtered post lists i.e. pages listing all posts belonging to a category or tag. The sample [wikipedia](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page is an example use case to show all posts that are Wikipedia articles.
+* `filtered-posts.html` is meant to be used for filtered post lists i.e. pages listing all posts belonging to a category or tag. The sample [wikipedia](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page is an example use case to show all posts that are Wikipedia articles.
 * `archive.html` shows a condensed view of many posts and their publishing dates.
 
 ### `_includes/`
+* `header.html` is put at the top of the home page and posts page.
 * `footer.html` is put at the bottom of every page to show copyright information.
 * `post-list.html` renders out a list of posts as defined by pagination.
 * `isso.html` contains the ISSO script tag and is included if comments are enabled. The tag also includes many of the configurable options as defined [here](https://posativ.org/isso/docs/configuration/client/).
@@ -84,7 +82,6 @@ Inside `kiko-minus/`:
 * `img/` is where your images will go for use throughout the site. You can add subfolders here as is done in this sample to better organize. Be warned that the photos here will be optimized *in place*, and that the originals will be copied over to `assets/img_archive` (or as otherwise defined in your config), which isn't included in your website's build.
 
 ### Misc
-* `.image-optim-cache` is used by the image optimization [plugin](https://github.com/ask616/jekyll-image-optim) to keep track of what files have already been optimized. *Do not delete this!*
 * `categories/` and `tags/` can be used to define category or tag filtered pages.
 * `pages/` can be used for individual pages.
 * `index.md` is the home page for your site.
@@ -124,17 +121,8 @@ fathom('trackPageview');
 
 In this case, the script is hosted at https://mysite.dev/analytics/tracker.js, and its site ID is ABCDE.
 
-### Gzip Compression
-If configured, kiko-minus will automatically create gzipped versions of your text files that will be served by default if GitHub or GitLab pages, or if otherwise configured on your host. As explained in the plugin's [usage](https://github.com/philnash/jekyll-zopfli#usage), the site must be built in production mode to create the gzipped bundles by setting the `JEKYLL_ENV` environment variable as such:
-
-```
-JEKYLL_ENV=production bundle exec jekyll build
-```
-
-This is done because creating the bundles can be slow, and so should only be done in production mode.
-
 ### Category and Tag Pages
-The plugin [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/) lets us paginate on categories and tags (and much more!). The directions for enabling pagination can be found in their [docs](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#paginate-categories-tags-locales), and an example is provided here with [wikipedia articles](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page. It is _highly_ recommended that you use the `filtered-home` layout for these pages.
+The plugin [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/) lets us paginate on categories and tags (and much more!). The directions for enabling pagination can be found in their [docs](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#paginate-categories-tags-locales), and an example is provided here with [wikipedia articles](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page. It is _highly_ recommended that you use the `filtered-posts` layout for these pages.
 
 ### Favicons
 kiko-minus supports including a 16x16 and 32x32 px favicon for your site. Place them in the `assets/img/logos/` directory with the names `favicon-16x16.png` and `favicon-32x32.png`, respectively, and they'll automatically be loaded.

@@ -1,7 +1,8 @@
 *.gem
 .bundle
-.sass-cache
-_site
+.sass-cache/
+_site/
 Gemfile.lock
 .DS_Store
-assets/img_archive/
+.jekyll-cache/
+.jekyll-metadata

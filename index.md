@@ -1,6 +1,6 @@
 ---
 layout: home
 title: Home
-pagination:
-  enabled: true
 ---
+
+👋 Hey MTV, welcome to my crib.

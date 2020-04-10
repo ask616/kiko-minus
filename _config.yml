@@ -20,6 +20,8 @@ theme: kiko-minus
 
 # List of links to show in the navbar with display name and URL
 nav:
+  - name: "Posts"
+    url: "/posts"
   - name: "About"
     url: "/about"
   - name: "Archive"
@@ -54,7 +56,7 @@ fathom:
 
 # Copyright details for footer
 copyright:
-  year: 2019
+  year: 2020
   name: "Your Name"
 
 
@@ -72,21 +74,17 @@ exclude:
   - .gitignore
   - .gitlab-ci.yml
   - .jekyll-cache
-  - .image-optim-cache
   - "*.gem"
-  - assets/img_archive
 
 
 ###########
 # Plugins #
 ###########
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-zopfli
-  - jekyll-image-optim
 
 
 ################
@@ -113,12 +111,6 @@ social:
     - https://www.facebook.com/YourFacebook
     - https://www.linkedin.com/in/YourLinkedin
     - https://github.com/YourGithub
-
-# jekyll-image-optim
-image_optim:
-  archive_dir: "assets/img_archive"
-  cache_file: ".image-optim-cache"
-  image_glob: "assets/img/**/*.{gif,png,jpg,jpeg}"
 
 
 ###################

@@ -1,5 +1,5 @@
 ---
-layout: filtered-home
+layout: filtered-posts
 title: Wikipedia Articles
 permalink: /wikipedia/
 pagination:

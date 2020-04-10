@@ -10,6 +10,10 @@ layout: default
   {%- include header.html -%}
 </header>
 
-<div class="page-content">
-  {{ content }}
+<div class="post-list">
+{% if site.posts.size == 0 %}
+  <h2>No posts quite yet</h2>
+{% else %}
+  {%- include post-list.html -%}
+{% endif %}
 </div>
