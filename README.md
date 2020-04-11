@@ -54,7 +54,7 @@ kiko-minus has an assortment of components to minimize additional needed configu
 ### `_layouts/`
 * `default.html` defines the basic structure of every page, including SEO tags, stylesheet imports, and favicons.
 * `home.html` is used for the index page, and includes a navigation bar and some intro text.
-* 'posts.html' is used to show a list of all your posts.
+* `posts.html` is used to show a list of all your posts.
 * `page.html` is used for individual pages i.e. an About or Contact page.
 * `post.html` is for your blog posts, and can include a comment section if ISSO is enabled.
 * `filtered-posts.html` is meant to be used for filtered post lists i.e. pages listing all posts belonging to a category or tag. The sample [wikipedia](https://github.com/ask616/kiko-minus/blob/master/categories/wikipedia.md) page is an example use case to show all posts that are Wikipedia articles.
